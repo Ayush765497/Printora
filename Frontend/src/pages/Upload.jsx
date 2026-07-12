@@ -2,6 +2,7 @@ import { useState } from "react";
 import API from "../api/api";
 
 function Upload() {
+ const [file, setFile] = useState(null);
  const [copies, setCopies] = useState(1);
  const [paperSize, setPaperSize] = useState("A4");
  const [printType, setPrintType] = useState("Black & White");

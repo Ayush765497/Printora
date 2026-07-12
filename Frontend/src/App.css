@@ -1,0 +1,781 @@
+/* ==========================================
+            GLOBAL
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f8fafc;
+    color:#1e293b;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+    transition:.3s;
+}
+
+/* ==========================================
+            NAVBAR
+========================================== */
+
+nav{
+    width:100%;
+    height:75px;
+    padding:0 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#2563eb;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+}
+
+.logo h2{
+    color:white;
+    font-size:28px;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+
+nav ul li{
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#dbeafe;
+}
+
+/* ==========================================
+            HERO
+========================================== */
+
+.hero-section{
+
+    width:100%;
+    min-height:90vh;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:60px;
+
+    padding:70px 8%;
+
+    background:#f8fafc;
+
+}
+
+.hero-left{
+
+    flex:1;
+
+}
+
+.hero-right{
+
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.hero-right img{
+
+    width:100%;
+    max-width:450px;
+
+}
+
+.hero-left h1{
+
+    font-size:58px;
+    line-height:1.2;
+    color:#0f172a;
+
+    margin-bottom:20px;
+
+}
+
+.hero-left p{
+
+    font-size:20px;
+    line-height:1.8;
+    color:#64748b;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================
+            BUTTONS
+========================================== */
+
+.hero-buttons{
+
+    display:flex;
+    gap:20px;
+
+}
+
+.primary-btn{
+
+    background:#2563eb;
+    color:white;
+
+    padding:15px 32px;
+
+    border-radius:10px;
+
+    font-size:16px;
+    font-weight:600;
+
+}
+
+.primary-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.secondary-btn{
+
+    background:white;
+
+    color:#2563eb;
+
+    border:2px solid #2563eb;
+
+    padding:15px 32px;
+
+    border-radius:10px;
+
+    font-size:16px;
+    font-weight:600;
+
+}
+
+.secondary-btn:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+nav{
+
+flex-direction:column;
+
+height:auto;
+
+padding:20px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero-section{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+padding:50px 20px;
+
+}
+
+.hero-left h1{
+
+font-size:40px;
+
+}
+
+.hero-left p{
+
+font-size:18px;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+.hero-right img{
+
+max-width:320px;
+
+}
+
+}
+
+/* ==========================================
+              FEATURES
+========================================== */
+
+.features{
+    padding:80px 8%;
+    background:#ffffff;
+}
+
+.features h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#1e293b;
+}
+
+.feature-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.feature-card{
+    background:#ffffff;
+    padding:35px 25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(37,99,235,.15);
+}
+
+.feature-icon{
+    width:75px;
+    height:75px;
+    margin:auto;
+    border-radius:50%;
+    background:#2563eb;
+    color:#ffffff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.feature-card h3{
+    margin-bottom:15px;
+    color:#1e293b;
+    font-size:22px;
+}
+
+.feature-card p{
+    color:#64748b;
+    line-height:1.6;
+}
+
+
+/* ==========================================
+              SERVICES
+========================================== */
+
+.services-section{
+    padding:80px 8%;
+    background:#f8fafc;
+}
+
+.services-section h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#1e293b;
+}
+
+.services-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.service-card{
+    background:#ffffff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(37,99,235,.15);
+}
+
+.service-card h3{
+    color:#2563eb;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.service-card p{
+    color:#64748b;
+    line-height:1.8;
+}
+
+
+/* ==========================================
+              COMMON SECTION
+========================================== */
+
+section{
+    width:100%;
+}
+
+h2{
+    font-weight:700;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ==========================================
+                PRICING
+========================================== */
+
+.pricing-section{
+    padding:80px 8%;
+    background:#ffffff;
+}
+
+.pricing-section h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#1e293b;
+}
+
+.pricing-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.pricing-card{
+    background:#f8fafc;
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.pricing-card:hover{
+    transform:translateY(-8px);
+}
+
+.pricing-card h3{
+    margin-bottom:15px;
+    color:#1e293b;
+}
+
+.pricing-card h1{
+    color:#2563eb;
+    margin-bottom:25px;
+    font-size:34px;
+}
+
+.pricing-card button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+}
+
+/* ==========================================
+                UPLOAD
+========================================== */
+
+.upload-section{
+    padding:80px 8%;
+    background:#f8fafc;
+}
+
+.upload-section h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.upload-box{
+    width:100%;
+    max-width:650px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.upload-box input,
+.upload-box select{
+    width:100%;
+    padding:15px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    outline:none;
+}
+
+.upload-box button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+}
+
+.file-info{
+    background:#eff6ff;
+    padding:15px;
+    border-radius:10px;
+}
+
+/* ==========================================
+                CONTACT
+========================================== */
+
+.contact-section{
+    padding:80px 8%;
+    background:white;
+}
+
+.contact-section h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info p{
+    margin-bottom:18px;
+    color:#64748b;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #d1d5db;
+}
+
+.contact-form textarea{
+    resize:none;
+    min-height:140px;
+}
+
+.contact-form button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+}
+
+/* ==========================================
+                AUTH
+========================================== */
+
+.auth-section{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    background:#f8fafc;
+}
+
+.auth-box{
+    width:100%;
+    max-width:420px;
+    background:white;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.auth-box h2{
+    text-align:center;
+}
+
+.auth-box input{
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #d1d5db;
+}
+
+.auth-box button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+}
+
+.toggle-text{
+    text-align:center;
+}
+
+.toggle-text span{
+    color:#2563eb;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* ==========================================
+                FOOTER
+========================================== */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+}
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.hero-section{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.contact-container{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    height:auto;
+    padding:20px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+.hero-left h1{
+    font-size:40px;
+}
+
+.hero-left p{
+    font-size:18px;
+}
+
+.features h2,
+.services-section h2,
+.pricing-section h2,
+.contact-section h2,
+.upload-section h2{
+    font-size:32px;
+}
+
+.upload-box,
+.auth-box{
+    padding:25px;
+}
+
+}/* ---------- HERO ENHANCEMENT ---------- */
+
+.hero-left h1 span{
+    color:#2563eb;
+}
+
+.hero-badge{
+    margin-top:30px;
+    display:inline-block;
+    padding:10px 18px;
+    background:#dbeafe;
+    color:#2563eb;
+    border-radius:50px;
+    font-weight:600;
+}
+
+.hero-right img{
+    filter:drop-shadow(0 20px 30px rgba(37,99,235,.20));
+    transition:.3s;
+}
+
+.hero-right img:hover{
+    transform:scale(1.03);
+}
+
+.primary-btn{
+    box-shadow:0 10px 20px rgba(37,99,235,.25);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* ---------- NAVBAR ENHANCEMENT ---------- */
+
+nav{
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+nav ul li a{
+    position:relative;
+}
+
+nav ul li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:white;
+    transition:.3s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+
+/* ---------- CARD ENHANCEMENT ---------- */
+
+.feature-card,
+.service-card,
+.pricing-card{
+
+border:1px solid #eef2f7;
+
+transition:.3s;
+
+}
+
+.feature-card:hover,
+.service-card:hover,
+.pricing-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.logo{
+    transition:.3s;
+}
+
+.logo:hover{
+    transform:scale(1.05);
+}
+
+.primary-btn,
+.secondary-btn{
+
+transition:.3s;
+
+}
+
+.primary-btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+.secondary-btn:hover{
+
+transform:translateY(-4px);
+
+}

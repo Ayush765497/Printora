@@ -1,11 +1,12 @@
-
+import "./App.css";
 import Navbar from "./components/Navbar";
-import Home from "./Pages/Home";
-import Services from "./Pages/Services";
-import Pricing from "./Pages/Pricing";
-import Upload from "./Pages/Upload";
-import Contact from "./Pages/Contact";
-import Auth from "./Pages/Auth";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Pricing from "./pages/Pricing";
+import Upload from "./pages/Upload";
+import Contact from "./pages/Contact";
+import Auth from "./pages/Auth";
+import Footer from "./components/Footer";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/auth" element={<Auth />} />
 
       </Routes>
+      <Footer />
     </>
   );
 }

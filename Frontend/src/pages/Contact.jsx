@@ -7,8 +7,8 @@ function Contact() {
         <div className="contact-info">
           <h3>Get in Touch</h3>
           <p>Email: support@printora.com</p>
-          <p>Phone: +91 9876543210</p>
-          <p>Address: Ghaziabad, Uttar Pradesh, India</p>
+          <p>Phone: +91 9999999999</p>
+          <p>Address: Ranchi, Jharkhand, India</p>
         </div>
 
         <form className="contact-form">
